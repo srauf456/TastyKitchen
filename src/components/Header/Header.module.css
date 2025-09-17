@@ -1,0 +1,103 @@
+.Header_Wrapper {
+    min-height: 100vh;
+    padding: 150px 20px 50px 20px;
+    text-align: center;
+    background-image: url("https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg");
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+    z-index: 1;
+    background-position: center;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Header_Wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: -1;
+}
+
+.Header_Wrapper h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    font-family: "Jost", sans-serif;
+    margin-bottom: 1rem;
+}
+
+.Header_Wrapper p {
+    font-size: 1.2rem;
+    color: #ffff;
+    margin-bottom: 1rem;
+    font-family: "Jost", sans-serif;
+}
+
+.Header_Wrapper small {
+    color: #ffff;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-family: "Jost", sans-serif;
+    background-color: rgba(255, 255, 255, 0.1);
+    opacity: 0.2;
+    padding: 0.2rem 0.5rem;
+    border-radius: 15px;
+    letter-spacing: 1px;
+    height: 2rem;
+    width: fit-content
+}
+
+.Header_Wrapper small::after, .Header_Wrapper small::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.Header_Wrapper button {
+    padding: 0.35rem 1.5rem;
+    font-size: 1.2rem;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 2rem;
+}
+
+.header_btns {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .Header_Wrapper {
+        padding: 1rem;
+    }
+
+    .Header_Wrapper h1 {
+        font-size: 3.5rem;
+        line-height: 1.2;
+    }
+
+    .Header_Wrapper p,
+    .Header_Wrapper small {
+        font-size: 2.5rem;
+    }
+
+    .Header_Wrapper button {
+        padding: 0.55rem 2.5rem;
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,127 @@
+.About_Wrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+    background-color: #f5f5f5;
+}
+
+.aboutImg{
+    width: 30%;
+    height: 100%;
+    margin-bottom: 2rem;
+    gap: 1rem;
+    overflow: hidden;
+    position: relative;
+
+}
+
+
+
+.aboutImg img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 380px;
+    border-top-right-radius: 380px;
+
+}
+
+.aboutImg::after{
+    content: '';
+    position: absolute;
+    top: -20%;
+    width: 10px;
+    transform: rotate(30deg);
+    background-color: white;
+    height: 150%;
+    left: -50%;
+    filter: blur(10px);
+    transition: .6s;
+}
+
+.aboutImg:hover::after{
+    left: 150%;
+}
+
+.aboutImg img:hover{
+    transform: scale(1.05);
+    transition: .6s;
+}
+
+.aboutContent{
+    width: 40%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+.aboutContent small{
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-family: "Jost", sans-serif;
+    background-color: rgba(255, 255, 255, 0.1);
+    opacity: 0.8;
+    padding: 0.2rem 0.5rem;
+    border-radius: 15px;
+    letter-spacing: 1px;
+    height: 2rem;
+    width: fit-content;
+}
+
+.aboutContent h1{
+    font-size: 2.5rem;
+    color: var(--dark-color);
+    font-family: "Jost", sans-serif;
+}
+
+.aboutContent p{
+    font-size: 1rem;
+    color: var(--grey-color);
+    line-height: 1.6;
+    font-family: "Jost", sans-serif;
+}
+
+.aboutContent .about_btns{
+    margin-top: 1rem;
+    padding: 0.2rem;
+    font-size: 1rem;
+    font-family: "Jost", sans-serif;
+}
+
+.aboutContent .about_btns a{
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+.aboutContent .about_btns a i{
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    border-radius: 50%;
+    background-color: rgba(41, 17, 17, 0.05);
+    padding: 0.75rem;
+
+}
+
+.aboutContent .about_btns a i:hover{
+    color: var(--primary-color);
+    background-color: rgba(41, 17, 17, 0.1);
+    animation: jiggle 0.3s infinite linear;
+}
+
+@keyframes jiggle {
+ 0%, 15%, 30%, 40%, 60%, 80% {
+    transform: translateX(-5px);
+  }
+  10%, 25%, 50%, 100% {
+    transform: translateX(5px);
+  }
+}

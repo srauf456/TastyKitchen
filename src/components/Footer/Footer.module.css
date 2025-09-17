@@ -1,0 +1,40 @@
+.social{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+}
+
+
+.social i{
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    height: 2rem;
+    width: 2rem;
+    border-color: 1px solid black;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 1.2rem;
+    justify-content: center;
+    margin-top: 0.5rem;
+
+}
+
+.social i:hover{
+    color: var(--primary-color);
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.Footer_Wrapper{
+    background: linear-gradient(to right, var(--primary-color), white);
+    background-size: cover;
+    padding: 2rem 1rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin-top: 2rem;
+}
+
